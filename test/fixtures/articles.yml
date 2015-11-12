@@ -3,13 +3,13 @@
 one:
   title: MyString
   body: MyText
-  author: MyString
+  author_id: 
   published: false
-  published_at: 2015-11-12 14:51:25
+  published_at: 2015-11-12 17:15:37
 
 two:
   title: MyString
   body: MyText
-  author: MyString
+  author_id: 
   published: false
-  published_at: 2015-11-12 14:51:25
+  published_at: 2015-11-12 17:15:37

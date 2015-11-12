@@ -14,13 +14,21 @@ def lorem
 end
 
 def author
-  ["Lorem Ipsum", "Magna Aliqua", "Commodo Consequat"].sample
+  Author.all.sample
 end
 
 def published
   [true, true, false].sample
 end
 
+def published_at
+  Time.now - [0, 1, 2, 3, 4, 5].sample.days
+end
+
+["Lorem Ipsum", "Magna Aliqua", "Commodo Consequat"].each do |name|
+  Author.create name: name
+end
+
 35.times do |i|
-  Article.create! title: title, author: author, published: published
+  Article.create! title: title, author: author, published: published, published_at: published_at
 end

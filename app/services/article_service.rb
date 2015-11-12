@@ -18,14 +18,14 @@ class ArticleService
   end
 
   filter :title
-  filter :author
+  filter :author, as: :select, collection: -> { Author.all }, option_text: "name"
 
   def filter_title(articles, value)
     articles.where("title LIKE ?", "%#{value}%")
   end
 
   def filter_author(articles, value)
-    articles.where("author LIKE ?", "%#{value}%")
+    articles.where(author: value)
   end
 
   batch_action :unpublish, except: [:unpublished]
@@ -42,5 +42,9 @@ class ArticleService
 
   def batch_action_destroy(articles)
     articles.each { |a| a.destroy }
+  end
+
+  def per_page
+    15
   end
 end
