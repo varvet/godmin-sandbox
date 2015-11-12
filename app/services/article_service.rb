@@ -21,11 +21,11 @@ class ArticleService
   filter :author
 
   def filter_title(articles, value)
-    articles.where(title: value)
+    articles.where("title LIKE ?", "%#{value}%")
   end
 
   def filter_author(articles, value)
-    articles.where(author: "#{value}")
+    articles.where("author LIKE ?", "%#{value}%")
   end
 
   batch_action :unpublish, except: [:unpublished]
