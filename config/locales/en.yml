@@ -21,3 +21,12 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+      author:
+        one: Author
+        other: Authors

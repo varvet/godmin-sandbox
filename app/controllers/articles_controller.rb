@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
 
   private
 
+  def resource_params
+    params.require(:article).permit(:title, :body, :author_id, :published, :published_at)
+  end
+
   def redirect_after_batch_action_unpublish
     articles_path(scope: :unpublished)
   end
