@@ -5,11 +5,11 @@ one:
   body: MyText
   author: one
   published: false
-  published_at: 2016-07-12 12:34:18
+  published_at: 2016-07-12 12:50:54
 
 two:
   title: MyString
   body: MyText
   author: two
   published: false
-  published_at: 2016-07-12 12:34:18
+  published_at: 2016-07-12 12:50:54
