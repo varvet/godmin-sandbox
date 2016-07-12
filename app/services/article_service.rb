@@ -33,15 +33,15 @@ class ArticleService
   batch_action :destroy, confirm: true
 
   def batch_action_unpublish(articles)
-    articles.each { |a| a.update(published: false) }
+    articles.update_all(published: false)
   end
 
   def batch_action_publish(articles)
-    articles.each { |a| a.update(published: true) }
+    articles.update_all(published: true)
   end
 
   def batch_action_destroy(articles)
-    articles.each { |a| a.destroy }
+    articles.destroy_all
   end
 
   def per_page

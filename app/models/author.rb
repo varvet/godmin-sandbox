@@ -1,4 +1,4 @@
-class Author < ActiveRecord::Base
+class Author < ApplicationRecord
   def to_s
     name
   end
