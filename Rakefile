@@ -9,7 +9,6 @@ namespace :sandbox do
   desc "Reseed the database"
   task reseed: :environment do
     Rake::Task["sandbox:reset"].invoke
-    System.cmd("bin/rails db:environment:set")
     Rake::Task["db:schema:load"].invoke
     Rake::Task["db:seed"].invoke
   end
