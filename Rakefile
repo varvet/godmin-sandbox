@@ -8,7 +8,6 @@ Rails.application.load_tasks
 namespace :sandbox do
   desc "Reseed the database"
   task reseed: :environment do
-    ENV["DISABLE_DATABASE_ENVIRONMENT_CHECK"]=1
     Rake::Task["sandbox:reset"].invoke
     Rake::Task["db:environment:set"].invoke
     Rake::Task["db:schema:load"].invoke
