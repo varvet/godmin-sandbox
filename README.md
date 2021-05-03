@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the source code for a demo application of the [Godmin](https://github.com/varvet/godmin) admin framework for Rails. The demo application is publically available with no authentication required, allowing potential users to try out Godmin without having to set it up locally.  
